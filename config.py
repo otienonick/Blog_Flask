@@ -6,7 +6,7 @@ class Config:
     
     '''
 
-    BLOG_API_BASE_URL = 'http://quotes.stormconsultancy.co.uk/{}.json'
+    BLOG_API_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
     SECRET_KEY = 'knlkfbdjvjsbvuiegwfbdlskvndsbvdwvkcjdbsviydwus'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'

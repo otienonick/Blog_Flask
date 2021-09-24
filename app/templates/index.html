@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% block content%}
+<h1 class="text-center">RANDOM QUOTES</h1>
+
+<div class="col-lg-8">
+    <div class="row">
+        <div class="col-md-6 d-flex align-items-stretch mt-4 mt-lg-5">
+            <div class="icon-box">
+          <h4><a href="">{{quotes.author}} </a></h4>
+          <p>{{quotes.quote}}</p>
+        </div>
+      </div>
+  </div>
+  </div>
+
+{%endblock%}
