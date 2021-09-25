@@ -412,8 +412,17 @@ color: #8D8D8D;
 }
 
 
+.form-content a {
+  color: #fff;
 
-
+}
+.form-content a:hover {
+  text-decoration: underline;
+  
+}
+.down{
+  margin-top: 10%;
+}
 
 
 

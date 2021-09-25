@@ -1,15 +1,27 @@
 {% extends 'base.html'%}
 {% import 'bootstrap/wtf.html' as wtf%}
 
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"/>
+
+    {% endblock %}
+
+    {% block scripts%}
+    {{ super() }}
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    {% endblock %}
+
 
 {% block content %}
 
 <div class="container">
 
-<div class="row">
+<div class="row mx-5">
 
 
-  <div class="col-md-4">
+  <div class=" down col-md-4">
     <h3> {{user.username| capitalize}} </h3>
 
     {% if user.bio %}
@@ -20,14 +32,14 @@
     {% endif %}
 
     {% if user == current_user %}
-      <a href="{{url_for('main.update_profile',uname = user.username)}}">Edit profile</a>
+      <a class="btn-primary" href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
     {% endif %}
 
   </div>
   <div class="col-md-4">
     {% if user.profile_pic_path %}
 
-    <img src="{{url_for('static',filename = user.profile_pic_path)}}" alt="" class="img-thumbnail">
+    <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail rounded-circle mb-3">
 
     {%else%}
 
@@ -36,10 +48,12 @@
     {% endif %}
 
     {% if user == current_user %}
-    <form  action="{{url_for('main.update_pic',uname = user.username)}}" method="post" enctype = "multipart/form-data">
+    <form  action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype = "multipart/form-data">
 
-      <input type="file"  name="photo" class="form-control" required>
-      <input class="btn btn-success btn-sm" type="submit">
+      <input style="width: 60%;" type="file"  name="photo" class="form-control" required>
+      <div style="margin-left: 40px;margin-top: 10px;" class="text_center">
+      <input  class="btn btn-primary btn-sm" type="submit">
+      </div>
     </form>
       {% endif %}
   </div>
@@ -47,4 +61,5 @@
 
 </div>
 </div>
+
 {% endblock %}

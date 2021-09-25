@@ -16,7 +16,7 @@ def login():
             if check_password_hash(user.password,password):
                 flash('Logged in!',category='success')
                 login_user(user,remember=True)
-                return redirect(url_for('views.index'))
+                return redirect(url_for('main.index'))
             else:
                 flash('password is incorrect',category='error')    
         else:
@@ -44,9 +44,9 @@ def sign_up():
         elif password1 != password2:
             flash('passwords do not match!', category='error') 
         elif len(username) < 4:
-            flash('Username is too short' , category='error')
+            flash('Username is too short...must be atleast four characters' , category='error')
         elif len(password1) < 6:
-            flash('Password is too short', category='error')
+            flash('Password is too short..must be atleast six characters', category='error')
         else:
             new_user = User(email = email,username = username ,password = generate_password_hash( password1, method='sha256'))
             db.session.add(new_user)
@@ -57,11 +57,10 @@ def sign_up():
             
 
     return render_template('auth/register.html',user = current_user)
-
-
-    
+ 
 @auth.route('/sign_out')
 @login_required
 def sign_out():
     logout_user()
+    flash('you are logged out',category= 'success')
     return redirect(url_for('main.index'))    
