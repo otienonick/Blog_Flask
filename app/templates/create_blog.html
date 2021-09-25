@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{%block title%}Create Post{% endblock%}
+
+{%block content%}
+<div class="container">
+
+    <div class="form-body">
+
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <form method="POST">
+                            <h3 class="text-center">Create a Blog</h3>
+                            <div class="mb-2">
+                                  <textarea name="text" id="text"  class="form-control"></textarea>
+                                </div>
+                                  <div class="form-button text-center mt-3">
+                                    <button id="submit" type="submit" class="btn btn-primary">BLOG</button>
+                                </div>          
+                        </form>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock%}
