@@ -13,8 +13,6 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:postgres@localhost/blog'
 
 
-   
-    
     #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
