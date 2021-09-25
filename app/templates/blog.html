@@ -6,7 +6,7 @@
    
 </style>
 
-<h1 class="text-center">{%block header%}Posts{% endblock%}</h1>
+<h1 class="text-center">{%block header%}Recent Blogs{% endblock%}</h1>
 
 <div id="posts" >
 <div class="row">
@@ -29,6 +29,10 @@
 
     </div>
     <div class="card-body">
+        <div class="card-image m-2">
+            <img src="//unsplash.it/570/300" class="img-fluid" alt="blogger">
+
+        </div>
         <div class="card-text">
             {{post.text}} <i title="like post" id="like-button-{{post.id}}" onClick="like({{post.id}})" class="far fa-thumbs-up  float-end"><span id="likes-count-{{post.id}}">{{post.likes | length}}</span></i>
 

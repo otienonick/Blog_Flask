@@ -5,6 +5,10 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  background-image: url('../photos/dariusz-sankowski-3OiYMgDKJ6k-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
 }
 
 a {
@@ -283,11 +287,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-holder {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
+  min-height: 60vh;
  
 }
 
@@ -427,4 +430,33 @@ i:hover{
 cursor: pointer;
 }
 
+
+
+
+  
+
+
+/* ==========================================
+    FOR DEMO PURPOSE
+  ========================================== */
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+#foot a {
+  color: #ebeff8;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#foot a:hover, a:focus {
+  text-decoration: underline;
+}
+
+
+footer {
+  background: #009970;
+  width: 100%;
+}
 
