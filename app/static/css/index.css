@@ -423,6 +423,8 @@ color: #8D8D8D;
 .down{
   margin-top: 10%;
 }
-
+i:hover{
+cursor: pointer;
+}
 
 
