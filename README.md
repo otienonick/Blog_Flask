@@ -27,7 +27,11 @@
 
 ### LICENCE
 
-<img src="">
+<img src="app/static/photos/number1.png">
+<img src="app/static/photos/number2.png">
+<img src="app/static/photos/number3.png">
+<img src="app/static/photos/number4.png">
+
 
 
 
